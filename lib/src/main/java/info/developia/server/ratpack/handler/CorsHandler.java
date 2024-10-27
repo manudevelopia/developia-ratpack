@@ -8,11 +8,6 @@ public class CorsHandler implements Handler {
 
     @Override
     public void handle(Context ctx) {
-//        MutableHeaders headers = ctx.getResponse().getHeaders();
-//        headers.set("Access-Control-Allow-Origin", "*");
-//        headers.set("Access-Control-Allow-Headers", "x-requested-with, origin, content-type, accept");
-//        ctx.next();
-
         Response response = ctx.getResponse();
         response.getHeaders().add("Access-Control-Allow-Origin", "*");
         response.getHeaders().add("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
